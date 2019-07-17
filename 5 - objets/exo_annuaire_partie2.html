@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+    let annuaire = {
+        patricia: '06 66 66 66 66',
+        david: '07 77 77 77 77',
+    };
+    let choix = '';
+    while (choix !== 'q' ) {
+
+        choix = prompt('quel action voulez vous realisez? ');
+
+
+        if (choix === "r") {
+            let prenom = prompt('vous cherchez qui ?');
+
+            if (annuaire [prenom]) {
+                alert(annuaire [prenom]);
+            }
+
+        } else if (choix === "l") {
+
+            for (let prenom in annuaire) {
+                console.log(prenom, annuaire [prenom]);
+            }
+
+        } else if (choix === "a") {
+
+            let prenom = prompt('quel prenom ?');
+            let numero = prompt('quel numero ?');
+
+            annuaire [prenom] = numero;
+
+        } else if (choix === "s") {
+            let prenom = prompt('prenom  a supprimer ');
+
+            if (annuaire[prenom]) {
+                delete annuaire [prenom];
+
+            }
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
+
+

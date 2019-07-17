@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+let fruitsTableau = [ 'Raisin', 'Framboise', 'Figue', 'Kiwi', 'Salade']; // creation d'un tableau
+
+let fruitsObjet = {
+    raisin:'fruits',
+    framboise: 'fruits',
+    salade: 'legume',
+    'salade de fruit' : 'mélange'
+};
+
+console.log (fruitsTableau [1]); // Framboise
+console.log (fruitsObjet['framboise']); // fruits
+console.log (fruitsObjet['salade de fruit']); // mélange
+console.log (fruitsObjet.framboise); // Fruits
+
+fruitsObjet.peche ='fruit'; // ajoute/modifie une valeur (l'objet sait que la pêche n'existe pas, donc il va "push" tout seul sans qu'on ai à lui dire.
+fruitsObjet ["legume random"] = 'legume';
+
+delete fruitsObjet.salade;
+
+let monFruit = 'raisin';
+
+console.log(fruitsObjet[monFruit]); // retourne fruit
+
+if (fruitsObjet[monFruit]) { // condition pour tester si la clé existe
+
+}
+    
+</script>
+
+</body>
+</html>
+
+
