@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>exo 2</title>
+</head>
+<body>
+
+<p id="premier">texte visible</p>
+<p id="second" class="hidden">ce texte devrait être caché</p>
+
+
+<button onclick="clickhidden()"> hop disparu ! / me revoilà ! </button>
+
+<script type="text/javascript">
+
+    let secondElement = document.getElementById('second');
+
+    console.log(secondElement.classList);
+
+
+    function clickhidden(){
+        secondElement.classList.toggle('hidden');
+    }
+
+</script>
+
+<style type = "text/css">
+    .hidden {
+        display: none;
+    }
+
+</style>
+
+
+</body>
+</html>
