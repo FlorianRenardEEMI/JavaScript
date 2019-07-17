@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>doc</title>
+</head>
+<body>
+
+<input type="integer" id="premier-nombre" value=''>
+<input type="integer" id="deuxieme-nombre" value="">
+<input type="text" id="myResult" value="">
+
+<button id="myButton">calculer</button>
+
+<script type="text/javascript">
+
+    let myButtonElement = document.getElementById('myButton');
+    let myInputElement = document.getElementById('myResult');
+
+    myButtonElement.onclick = function(event){
+        console.log(event);
+        let nombreUn = parseInt(document.getElementById('premier-nombre').value);
+        let nombreDeux = parseInt(document.getElementById('deuxieme-nombre').value);
+        myInputElement.value = nombreUn + nombreDeux;
+    };
+
+</script>
+
+</body>
+</html>

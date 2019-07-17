@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>doc</title>
+</head>
+<body>
+
+<div id='toto' style ='height: 2000px'>
+    test
+</div>
+
+<input type="text" id="myInput" value="lala">
+
+<button id="myButton">clique moi dessus</button>
+
+<script type="text/javascript">
+
+ //console.log(document);
+ //console.log (document.getElementById('toto'));
+
+/*let elementToto = document.getElementById('toto');
+
+console.log (elementToto.innerText);
+console.log (elementToto.innerHTML);
+
+let myInputElement = document.getElementById('myInput');
+
+console.log(myInputElement.value);
+
+setTimeout (function(){ // execute le code au bout de x millisecondes (ms)
+myInputElement.value = 'test';
+elementToto.innerHTML = 'ceci est un test';
+},3000);*/
+
+
+let myButtonElement = document.getElementById('myButton');
+let myInputElement = document.getElementById('myInput');
+let elementToto = document.getElementById('toto');
+
+myButtonElement.onclick = function(event){
+    console.log(event);
+    myInputElement.value = 'aaaaaaa';
+};
+
+elementToto.onmouseover = function(){
+    console.log('passe au dessus !');
+}
+
+window.onblur = function (){
+    console.log('pourquoi tu pars ?');
+};
+
+ window.onfocus = function (){
+     console.log('coucou toi !');
+ };
+
+ window.onscroll = function (event){
+     console.log(event);
+ };
+
+
+</script>
+
+</body>
+</html>
