@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>chi fou mi</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    let tableau = ['pierre', 'feuille', 'ciseaux']; // creation d'un tableau
+    let scoreOrdi = 0;
+    let scoreJoueur = 0;
+
+    while (scoreJoueur !== 3 && scoreOrdi !== 3) {
+
+        let NmbRand = Math.round(Math.random() * 2);
+
+        const choixOrdi = tableau[NmbRand];
+        const choixUtilisateur = prompt("quel est votre choix ?");
+
+
+        let resultat = comparer(choixUtilisateur, choixOrdi);
+
+        if (resultat === 'gagne') {
+            alert("gagné");
+            scoreJoueur++;
+        } else if (resultat === 'perdu') {
+            alert("perdu");
+            scoreOrdi++;
+        } else {
+            alert("égalité !");
+        }
+
+    }
+
+
+
+    function comparer(choix1, choix2) {
+
+        if (choix1 === "pierre" && choix2 === "ciseaux" || choix1 === "feuille" && choix2 === "pierre" || choix1 === "ciseaux" && choix2 === "feuille") {
+            return "gagne"
+        } else if (choix1 === choix2) {
+            return "égalité";
+        } else {
+            return "perdu";
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
