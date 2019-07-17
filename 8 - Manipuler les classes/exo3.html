@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>exo 3_surbrillance au clic</title>
+</head>
+<body>
+
+<!-- ajoute ou enlève un fond de couleur en cliquant sur du texte -->
+
+<p id="premier" class="fond">texte important</p>
+<p onclick="clicYellow()" id="second" class="fond">autre texte</p>
+
+
+<script type="text/javascript">
+
+        let backgroundElement = document.getElementsByClassName('fond');
+
+        for(let i =0; i < backgroundElement.length; i++){
+            let element = backgroundElement[i];
+
+            element.onclick = function () {
+                if (element.style.backgroundColor === ''){
+                    element.style.backgroundColor = 'yellow';
+                } else {
+                    element.style.backgroundColor = '';
+                }
+            }
+        }
+
+</script>
+
+</body>
+</html>

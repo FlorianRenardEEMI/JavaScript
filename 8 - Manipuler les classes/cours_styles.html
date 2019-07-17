@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>style</title>
+</head>
+<body>
+
+<div id='toto' class="card text-center">
+    test
+</div>
+
+<br>
+
+<div class="fox">test</div>
+<div class="fox">titi</div>
+<div class="fox">tutu</div>
+
+<br>
+
+<button onclick="clickColor()"> clic moi dessus ! </button>
+
+<script type="text/javascript">
+
+    //rappeler un élèment par son id
+
+    let totoElement = document.getElementById('toto');
+
+    console.log(totoElement.classList);
+
+setTimeout (function(){
+    totoElement.classList.add('color-red');
+    },2000);
+
+    setTimeout (function(){
+        totoElement.classList.remove('color-red');
+    },4000);
+
+    //change le fond de la div
+
+    function clickColor(){
+        totoElement.classList.toggle('bg-color');
+    }
+
+    //rappeler un élèment par sa classe
+
+    let foxClassElements = document.getElementsByClassName('fox');
+
+    for(let i =0; i < foxClassElements.length; i++){
+        let element = foxClassElements[i];
+        console.log(element.innerText="ligne");
+        element.classList.add('color-red');
+    }
+
+    //suite du cours, met en fond rouge la div toto mais fait sauter le fait de mettre le background vert au clic
+
+    totoElement.style.backgroundColor='red';
+    totoElement.style.fontSize='56px';
+
+
+</script>
+
+<style type = "text/css">
+    .bg-color{
+        background-color:green;
+    }
+    .color-red{
+        color:red;
+    }
+
+</style>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>exo 1_ afficher/cacher</title>
+</head>
+<body>
+
+<!-- ici, le but est de cacher tous les éléments qui ont un id particulier (second pour cet exemple) -->
+
+<p id="premier">texte visible</p>
+<p id="second" class="hidden">ce texte devrait être caché</p>
+
+
+<button onclick="clickhidden()"> hop disparu ! / me revoilà ! </button>
+
+<script type="text/javascript">
+
+    let secondElement = document.getElementById('second');
+
+    console.log(secondElement.classList);
+
+
+    function clickhidden(){
+        secondElement.classList.toggle('hidden');
+    }
+
+</script>
+
+<style type = "text/css">
+    .hidden {
+        display: none;
+    }
+
+</style>
+
+
+</body>
+</html>
