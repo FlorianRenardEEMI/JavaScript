@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>conditions</title>
+</head>
+<body>
+
+<!-- vérifie si l'utilisateur est mineur ou majeur pour permettre l'accès à un site par exemple -->
+
+<script type="text/javascript">
+
+    let a = 10;
+    let b = 15;
+    let c = 20;
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+    if (a < b) {
+        //alert('a est inférieur a b');
+    } else if (a === b) {
+        //alert('a est supérieur a b');
+    } else {
+        //alert('a est supérieur à b');
+    }
+
+    let reponse = prompt('quel âge avez-vous ?');
+    reponse = parseInt(reponse);
+
+    if (reponse >= 18) {
+        alert ('tu es majeur');
+    } else {
+        alert ('tu es mineur, dégage !');
+    }
+
+</script>
+
+</body>
+</html>
