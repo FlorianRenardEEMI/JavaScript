@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>jeu du pendu</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    let mauvaisesLettres = [ ]; // sera complété pendant le jeu
+    let lettresAttendues = [ 's', 'u', 'p', 'e', 'r' ];
+
+    while(mauvaisesLettres.length<10 && lettresAttendues.length>0){
+
+        let lettre = prompt('choisissez une lettre');
+        let positionlettre = lettresAttendues.indexOf(lettre);
+
+        if (positionlettre !== -1){
+            lettresAttendues.splice(positionlettre,1);
+        } else {
+            mauvaisesLettres.push(lettre)
+        }
+
+    }
+
+    if (lettresAttendues.length === 0){
+        alert ('Félicitations')
+    } else {
+        alert ('Perdu !')
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    console.log (lettresAttendues);
+
+    let reponse= prompt("essayez une lettre ?");
+
+if (lettresAttendues.indexOf(reponse)!== -1) {
+    reponse.splice(mauvaisesLettres.indexOf(reponse), 1);
+} else {
+    console.log("mauvaises lettres");
+}
+
+    
+</script>
+
+</body>
+</html>
+
+

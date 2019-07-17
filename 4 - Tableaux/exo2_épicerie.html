@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>épicerie</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+let fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ]; // creation d'un tableau
+
+console.log (fruits);
+
+let reponse= prompt("quel fruit désirez-vous ?");
+
+if (fruits.indexOf(reponse)!== -1) {
+    fruits.splice(fruits.indexOf(reponse), 1);
+} else {
+    console.log("indisponible");
+}
+
+    
+</script>
+
+</body>
+</html>
+
+

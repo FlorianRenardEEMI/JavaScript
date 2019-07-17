@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calendrier</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+let MyTabJours = ['lun', '007', 'mer', 'jeu', 'ven', 'sam', 'BUG']; // creation d'un tableau
+
+MyTabJours.pop(); //supprime la dernière valeur du tableau
+
+console.log(MyTabJours.length); // le nombre d'éléments
+
+MyTabJours.push ('dim'); // ajout d'une ligne dans le tableau
+
+console.log (MyTabJours);
+MyTabJours [1]= "Mar";
+
+for (let i = 0; i < MyTabJours.length; i++){
+    console.log (MyTabJours[i]);
+}
+
+console.log (MyTabJours[2]); // mer
+
+console.log(MyTabJours);
+
+</script>
+
+</body>
+</html>
